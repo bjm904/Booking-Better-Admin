@@ -1,0 +1,27 @@
+{
+	"name": "Booking.com Better Admin",
+	"version": "0.0.1",
+	"description": "",
+	"manifest_version": 2,
+	"icons": {
+		"64": "img/icon-64.png"
+	},
+	"page_action": {
+		"default_icon": {
+			"64": "img/icon-64.png"
+		},
+		"default_title": "Booking.com Better Admin"
+	},
+	"background": {
+		"scripts": [
+		  "background.js"
+		],
+		"persistent": false
+	},
+	"permissions": [
+		"declarativeContent",
+		"tabs",
+		"<all_urls>"
+	],
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}

@@ -1,0 +1,58 @@
+<html>
+<title>Booking.com Better Admin</title>
+<style>
+a{
+	color:#0000EE;
+}
+th{
+	text-align:left;
+}
+.moneyCol{
+	text-align:right;
+}
+.row2Togglable{
+	display:none;
+}
+#loading{
+	display:none;
+	font-size:20px;
+}
+#credit{
+	position:fixed;
+	right:5px;
+	bottom:5px;
+	color:black;
+	font-size:20px;
+}
+.rowCancelled, .rowNo{
+	color:red;
+}
+.rowZero{
+	color:blue;
+}
+</style>
+<h1>Options:</h1>
+<table>
+<tr><td>Base:</td><td></td><td><select id="row1Type"><option value="booking">Booked</option><option value="arrival" selected>Arrival</option><option value="departure">Departure</option></select></td><td><input type="date" id="row1FromDate"></input> - <input type="date" id="row1ToDate"></input></td></tr>
+<tr><td>Filter:</td><td><input type="checkbox" id="row2Enable"></input></td><td class="row2Togglable"><select id="row2Type"><option value="booking">Booked</option><option value="arrival" selected>Arrival</option><option value="departure">Departure</option></select></td><td class="row2Togglable"><input type="date" id="row2FromDate"></input> - <input type="date" id="row2ToDate"></input></td></tr>
+<tr><td>
+Include:<br>
+<label><input type="checkbox" id="showOk" checked></input>Ok</label><br>
+<label><input type="checkbox" id="showCancelled" checked></input>Cancelled</label><br>
+<label><input type="checkbox" id="showNoShow" checked></input>No Show</label>
+</td></tr>
+</table>
+<input type="button" id="goButton" value="Search"></input><span id="loading">Loading...</span>
+<hr></hr>
+<h1>Totals:</h1>
+<table id="totalsTable"></table>
+<br>
+<h1>Reservations:</h1>
+<table id="dataTable"></table>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="papaparse.min.js"></script>
+<script src="main.js"></script>
+<span id="credit">Bryce J. Meyer</span>
+</html>
